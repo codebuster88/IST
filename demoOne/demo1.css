@@ -1,0 +1,13 @@
+article {
+		padding: 100px;
+		margin-right: 50px;
+		border: 1px solid #5D6063;
+}
+
+div.scroll {
+	background-color: #00FFFF;
+	width : 100px;
+	height: 100px;
+	overflow:scroll;
+	
+}
