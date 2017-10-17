@@ -1,0 +1,22 @@
+h1 {
+	text-align: center;
+}
+
+.instruction {
+	float: left;
+	text-align: center;
+	width: 49%;
+	height: 30%
+}
+
+#guess {
+	width: 40%;
+	text-align: left;
+	float: right;
+	margin: 55px;
+}
+
+#result {
+	clear: both;
+	text-align: center;
+}

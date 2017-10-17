@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+	<html>	
+		<head>
+			<title>Guessing Game</title>
+			<link rel="stylesheet" href="guessGame.css"/>
+		</head>
+		
+		<body class="case"> 
+			
+			<h1>The Guessing Game</h1>
+			
+			<div class="instruction"><em>Instructions:</em><br><span>Enter the number you want to be guessed below then click 
+					the "Guess" button to guess. Once button is clicked, the number to be guessed cannot be changed</span><br>
+				<label for="mn">Number to be guessed: </label>
+				<input type="password" id="mn" name="n2guess" size="5" /><br>
+				<button id='restart' type="button" onclick='restart()'>Restart</button>
+			</div>
+			<div id="guess">
+				<label for="yg">Your guess: </label>
+				<input type="text" id="yg" size="5"/><br>
+				<button id='gButton' type="button" onclick="guess()" >Guess</button>
+			</div>
+			<div id="result"></div>
+		<script src="guessGame.js"></script>
+		</body>
+	</html>
