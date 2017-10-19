@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>App</title>
+		<link href="appFrameGame.css" rel="StyleSheet" />
+		<script src="lib/jquery-3.2.1.min.js"></script>
+		<script src="appFrameGame.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<header>App</header>
+			<div id="main"><div class="instruction"><em>Instructions:</em><br><span>Enter the number you want to be guessed below then click 
+					the "Guess" button to guess. Once button is clicked, the number to be guessed cannot be changed</span><br>
+				<label for="mn">Number to be guessed: </label>
+				<input type="password" id="mn" name="n2guess" size="5" /><br>
+				<button id='restart' type="button" onclick='MyApp.restart()'>Restart</button>
+			</div>
+			<div id="guess">
+				<label for="yg">Your guess: </label>
+				<input type="text" id="yg" size="5"/><br>
+				<button id='gButton' type="button" onclick="MyApp.guess()" >Guess</button>
+			</div>
+			<div id="result"></div>
+				
+			</div>
+			<footer></footer>
+		</div>
+	</body>
+</html>
