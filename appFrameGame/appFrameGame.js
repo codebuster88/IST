@@ -4,6 +4,7 @@
 function MyApp()
 {
 	var version = "v1.0";
+	
 
 	// creating a private function
 	function setStatus(message)
@@ -24,17 +25,23 @@ function MyApp()
 		setStatus("ready");
 	};
 	
+	var numGuess = 0;
+	
 	function guess(){
 	var yg = document.getElementById("yg").value;
 	var mn = document.getElementById("mn").value;
+	
 	document.getElementById('mn').setAttribute('readonly', 'readonly');
 		if(mn === yg){
 			document.getElementById("guess").innerHTML = '';
-			document.getElementById('result').innerHTML = "<span style='color:green'>Your guess " + yg + " is correct! </span>";
+			numGuess = numGuess + 1;
+			document.getElementById('result').innerHTML = "<span style='color:green'>Your guess " + yg + " is correct! You guessed it in " + numGuess + " tries</span>";
+
 		}
 		else{
 			document.getElementById('result').innerHTML += yg + "<span style='color:red'> is incorrect! Try again.<br>";
 			document.getElementById("yg").value = '';
+			numGuess = numGuess + 1;
 		}
 	
 	}
