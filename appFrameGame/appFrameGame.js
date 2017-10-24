@@ -25,6 +25,8 @@ function MyApp()
 		setStatus("ready");
 	};
 	
+	
+	
 	var numGuess = 0;
 	
 	function guess(){
