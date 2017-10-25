@@ -31,6 +31,15 @@ function MyApp()
 		(part of the BOM - Browser Object Model)
 */
 function TaskAtHandApp(){
+	
+	var version = "v1.0"
+	
+	
+	function setStatus(message)
+	{
+		$("#app>footer").text(message);
+	}
+	
 	this.start = function()
 	{
 		$("#new-task-name").keypress(function(e) {
