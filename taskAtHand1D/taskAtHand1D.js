@@ -102,33 +102,33 @@ function TaskAtHandApp(){
 	}
 
 	function addTaskElement (taskName){
-		undoTaskList();
+		//undoTaskList();
 		var $task = $("#task-template .task").clone();
 		$("span.task-name", $task).text(taskName);
 
 		$("#task-list").append($task);
 
 		$("button.delete", $task).click(function(){
-			undoTaskList();
+			//undoTaskList();
 			removeTask($task);
 		});
 
 		$("button.move-up", $task).click(function(){
-			undoTaskList();
+			//undoTaskList();
 			moveTask($task, true);
 		});
 		$("button.move-down", $task).click(function(){
-			undoTaskList();
+			//undoTaskList();
 			moveTask($task, false);
 		});
 
 		$("span.task-name", $task).click(function(){
-			undoTaskList();
+			//undoTaskList();
 			onEditTaskName($(this));
 		});
 
 		$("input.task-name", $task).change(function(){
-			undoTaskList();
+			//undoTaskList();
 			onChangeTaskName($(this));
 		})
 		.blur(function() {
@@ -136,10 +136,12 @@ function TaskAtHandApp(){
 			});
 	}
 	function removeTask($task){
+		undoTaskList();
 		$task.remove();
 		saveTaskList();
 	}
 	function moveTask($task, moveUp){
+		undoTaskList();
 		if (moveUp) {
 			$task.insertBefore($task.prev());
 		}
@@ -151,6 +153,7 @@ function TaskAtHandApp(){
 
 
 	function onEditTaskName($span){
+		undoTaskList();
 			$span.hide()
 				.siblings("input.task-name")
 				.val($span.text())
@@ -158,6 +161,7 @@ function TaskAtHandApp(){
 				.focus();
 	}
 	function onChangeTaskName($input){
+		undoTaskList();
 			$input.hide();
 			var $span = $input.siblings("span.task-name");
 			if ($input.val()){
