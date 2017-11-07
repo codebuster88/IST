@@ -1,0 +1,16 @@
+ #app>#toolbar {
+    position: relative;
+    text-align: center;
+}
+
+#app>footer {
+    position: relative;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#app>header {
+    padding: 10px;
+    position: relative;
+    text-align: center;
+}

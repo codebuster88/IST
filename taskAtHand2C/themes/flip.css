@@ -1,0 +1,9 @@
+#task-list .task {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#task-list .task.selected {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
