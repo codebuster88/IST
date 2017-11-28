@@ -46,7 +46,7 @@ function WeatherWidget ($widget)
                     $("#longitude").val(position.coords.longitude);
                 },
                 function(error){
-                    $("#controls.error")
+                    $("#controls .error")
                     .text("ERROR: " + error.message)
                     .slideDown();
                 });
