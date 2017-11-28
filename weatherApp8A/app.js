@@ -3,7 +3,7 @@
 // using a function contructor form to create an object
 function MyApp()
 {
-	var version = "v1.0";
+	var version = "8.2";
 
 	// creating a private function
 	function setStatus(message)
