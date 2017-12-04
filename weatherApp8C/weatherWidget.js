@@ -32,13 +32,16 @@ function WeatherWidget ($widget)
     function getCurrentWeather(){
         var lat = $("#latitude").val();
         var lon = $("#longitude").val();
-        $("#weather-widget").fadeIn();
-        getWeatherReport(lat, lon, function(forecast, metadata){
-            // if(forecast && metadata){}
-                populateWeather(forecast, metadata);
-
+        if(lat && lon){
+            $("#weather-widget").fadeIn();
+            getWeatherReport(lat, lon, function(forecast, metadata){
+                // if(forecast && metadata){}
+                    populateWeather(forecast, metadata);
+            });
+        }
+        else $(".error>span").text("Location not found");
             
-        });
+        
             //WeatherWidget.update(lat, lon);
         
     }
