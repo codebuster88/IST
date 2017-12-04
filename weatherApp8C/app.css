@@ -96,7 +96,7 @@ button
     line-height: 1.8;
 }
 
-.error
+.errorGet, .errorLocation
 {
     display: none;
     color: red;

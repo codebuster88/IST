@@ -46,6 +46,11 @@ function WeatherWidget ($widget)
         
     }
 
+    function showError(showError){
+        $(".errorGet").toggle();
+        $(".errorGet>span").text(showError).css("display", "block");
+    }
+
     function populateWeather(forecast, metadata){
         if(forecast && metadata){
             $(".results header img", $widget)
@@ -75,8 +80,8 @@ function WeatherWidget ($widget)
                     $("#longitude").val(position.coords.longitude);
                 },
                 function(error){
-                    $("#controls.error")
-                    .text("ERROR: " + error.message)
+                    $(".errorLocation").show();
+                    $("#controls .errorLocation span").text("ERROR: " + error.message)
                     .slideDown();
                 });
         }
