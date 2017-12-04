@@ -32,7 +32,7 @@ function WeatherWidget ($widget)
     function getCurrentWeather(){
         var lat = $("#latitude").val();
         var lon = $("#longitude").val();
-        if(lat && lon){
+        if((lat && lon) != ""){
             $("#weather-widget").fadeIn();
             getWeatherReport(lat, lon, function(forecast, metadata){
                 // if(forecast && metadata){}
