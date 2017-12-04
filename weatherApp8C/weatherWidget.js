@@ -39,8 +39,9 @@ function WeatherWidget ($widget)
                     populateWeather(forecast, metadata);
             });
         }
-        else $(".error>span").text("Location not found");
-            
+        else {
+            showError("Location not found");
+        }
         
             //WeatherWidget.update(lat, lon);
         
@@ -48,7 +49,7 @@ function WeatherWidget ($widget)
 
     function showError(showError){
         $(".errorGet").toggle();
-        $(".errorGet>span").text(showError).css("display", "block");
+        $(".errorGet>span").text(showError);
     }
 
     function populateWeather(forecast, metadata){
@@ -63,8 +64,6 @@ function WeatherWidget ($widget)
                 var field = $span.data("field");
                 $(this).text(forecast["0"].properties.periods["0"][field]);
             });
-            // $(".results footer img", $widget)
-            // .attr("src", observation.image.url);
 
             $(".loading", $widget).fadeOut(function (){
                 $(".results", $widget).fadeIn();
@@ -81,7 +80,7 @@ function WeatherWidget ($widget)
                 },
                 function(error){
                     $(".errorLocation").show();
-                    $("#controls .errorLocation span").text("ERROR: " + error.message)
+                    $("#controls .errorLocation span").text(error.message)
                     .slideDown();
                 });
         }
