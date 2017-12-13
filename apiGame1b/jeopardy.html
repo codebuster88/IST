@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jeopardy.css">
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="jeopardy.js"></script>
+    <script src="ScoreTracker.js"></script>
+    <title>Jeopardy</title>
+</head>
+<body>
+    <header>
+        Jeopardy
+    </header>
+    
+    <div id="main">
+        <button class="start">start</button>
+        <select name="player-count" id="pc">
+            <option selected="selected" value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <div id="game">
+
+        </div>
+        <footer>
+            Score
+        </footer>
+    </div>
+    
+    <div id="gameplay">
+        <div>
+            <label for="player1">John</label><br>
+            <input class="player1" type="text" name="player1">
+        </div>
+        <div>
+            <label for="player2">Nick</label><br>
+            <input class="player2" type="text" name="player2">
+        </div>
+        <div>
+            <label for="player3">Will</label><br>
+            <input class="player3" type="text" name="player3">
+        </div>
+    </div>
+
+
+    <div id="categories">
+
+        <div class="category">
+                <div class="title"><span></span></div>
+                <div class="value"  data-value="1000">$1000</div>
+                <div class="value" data-value="800">$800</div>
+                <div class="value" data-value="600">$600</div>
+                <div class="value" data-value="400">$400</div>
+                <div class="value" data-value="200">$200</div>
+        </div>
+    
+    </div>
+    
+</body>
+</html>

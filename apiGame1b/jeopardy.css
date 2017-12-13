@@ -1,0 +1,66 @@
+.category>div {
+    border: 6px solid darkblue;
+    background-color: blue;
+    width: 140px;
+    height: 25px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: whitesmoke;
+    font-size: large;
+    
+}
+
+#gameplay {
+    display: inline-flex;
+    position: fixed;
+    left: 20px;
+    bottom: 18%;
+}
+header {
+    color: darkgoldenrod;
+    font-size: xx-large;
+    text-align: center;
+    
+}
+#gameplay>div {
+    display: none;
+    text-align: center;
+    padding-left: 200px;
+}
+
+input {
+    display: none;
+}
+
+.value.question{
+    width: 900px;
+    height: 127px;
+    position: fixed;
+    top: 148px;
+    left: 225px;
+    padding-top: 186px;
+    transform: rotateY(360deg);
+    -webkit-transition: width 2s, height 2s, transform 2s; 
+    transition: width 2s, height 2s, transform 2s;
+}
+
+.category>.value:hover {
+    background-color: black;
+    border: 6px solid blue;
+}
+
+#game{
+    display: inline-flex;
+    position: fixed;
+    left: 225px;
+    top: 80px;
+}
+
+#categories{
+    display: none;
+    padding: 3em;
+    height: 50%;
+    width: 10px;
+    float: left;
+}
